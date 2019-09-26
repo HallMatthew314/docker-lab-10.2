@@ -1,13 +1,13 @@
 FROM ubuntu:16.04
 
-LABEL maintainer=<Matthew Hall/HallMatthew314@gmail.com>
+LABEL maintainer="<Matthew Hall/HallMatthew314@gmail.com>"
 
 RUN apt-get -q update && apt-get -yq dist-upgrade
 RUN apt-get -yq install apache2
 
 ENV APACHE_RUN_USER www-data
 ENV APACHE_RUN_GROUP www-data
-ENV APACHE_LOG_FILE /var/log/apache2
+ENV APACHE_LOG_DIR /var/log/apache2
 ENV APACHE_LOCK_DIR /var/run/apache
 ENV APACHE_PID_FILE /var/run/apache/httpd.pid
 
